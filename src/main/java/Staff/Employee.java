@@ -1,12 +1,12 @@
 package Staff;
 
-public class Employee {
+public abstract class Employee {
 
     private String name;
-    private int NINumber;
+    private String NINumber;
     private double salary;
 
-    public Employee(String name, int NINumber, double salary) {
+    public Employee(String name, String NINumber, double salary) {
         this.name = name;
         this.NINumber = NINumber;
         this.salary = salary;
@@ -16,7 +16,7 @@ public class Employee {
         return this.name;
     }
 
-    public int getNINumber() {
+    public String getNINumber() {
         return this.NINumber;
     }
 
