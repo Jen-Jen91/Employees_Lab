@@ -4,7 +4,7 @@ public abstract class Employee {
 
     private String name;
     private String NINumber;
-    private double salary;
+    protected double salary;
 
     public Employee(String name, String NINumber, double salary) {
         this.name = name;
@@ -16,6 +16,12 @@ public abstract class Employee {
         return this.name;
     }
 
+    public void setName(String newName) {
+        if (newName != null && newName != "") {
+            this.name = newName;
+        }
+    }
+
     public String getNINumber() {
         return this.NINumber;
     }
@@ -25,7 +31,9 @@ public abstract class Employee {
     }
 
     public void raiseSalary(double raise) {
-        this.salary += raise;
+        if (raise > 0) {
+            this.salary += raise;
+        }
     }
 
     public double payBonus() {
