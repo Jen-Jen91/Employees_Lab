@@ -17,7 +17,7 @@ public abstract class Employee {
     }
 
     public void setName(String newName) {
-        if (newName != null && newName != "") {
+        if (!newName.equals(null) && !newName.equals("")) {
             this.name = newName;
         }
     }
