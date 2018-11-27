@@ -38,24 +38,24 @@ public class DatabaseAdminTest {
 
     @Test
     public void hasSalary() {
-        assertEquals(25000, databaseAdmin.getSalary(), 0.01);
+        assertEquals(25000, databaseAdmin.getSalary(), 0.1);
     }
 
     @Test
     public void canRaiseSalary() {
         databaseAdmin.raiseSalary(500);
-        assertEquals(25500, databaseAdmin.getSalary(), 0.01);
+        assertEquals(25500, databaseAdmin.getSalary(), 0.1);
     }
 
     @Test
     public void cannotUseNegativeNumberInRaiseSalaryMethod() {
         databaseAdmin.raiseSalary(-50);
-        assertEquals(25000, databaseAdmin.getSalary(), 0.01);
+        assertEquals(25000, databaseAdmin.getSalary(), 0.1);
     }
 
     @Test
     public void canGetPayBonus() {
-        assertEquals(250, databaseAdmin.payBonus(), 0.01);
+        assertEquals(250, databaseAdmin.payBonus(), 0.1);
     }
 
 }

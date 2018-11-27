@@ -37,7 +37,7 @@ public class ManagerTest {
 
     @Test
     public void hasSalary() {
-        assertEquals(35000, manager.getSalary(), 0.01);
+        assertEquals(35000, manager.getSalary(), 0.1);
     }
 
     @Test
@@ -48,18 +48,18 @@ public class ManagerTest {
     @Test
     public void canRaiseSalary() {
         manager.raiseSalary(500.50);
-        assertEquals(35500.50, manager.getSalary(), 0.01);
+        assertEquals(35500.50, manager.getSalary(), 0.1);
     }
 
     @Test
     public void cannotUseNegativeNumberInRaiseSalaryMethod() {
         manager.raiseSalary(-50);
-        assertEquals(35000, manager.getSalary(), 0.01);
+        assertEquals(35000, manager.getSalary(), 0.1);
     }
 
     @Test
     public void canGetPayBonus() {
-        assertEquals(350, manager.payBonus(), 0.01);
+        assertEquals(350, manager.payBonus(), 0.1);
     }
 
 }

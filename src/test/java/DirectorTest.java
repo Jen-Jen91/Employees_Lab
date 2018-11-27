@@ -37,7 +37,7 @@ public class DirectorTest {
 
     @Test
     public void hasSalary() {
-        assertEquals(50000, director.getSalary(), 0.01);
+        assertEquals(50000, director.getSalary(), 0.1);
     }
 
     @Test
@@ -47,24 +47,24 @@ public class DirectorTest {
 
     @Test
     public void hasBudget() {
-        assertEquals(250000, director.getBudget(), 0.01);
+        assertEquals(250000, director.getBudget(), 0.1);
     }
 
     @Test
     public void canRaiseSalary() {
         director.raiseSalary(5000);
-        assertEquals(55000, director.getSalary(), 0.01);
+        assertEquals(55000, director.getSalary(), 0.1);
     }
 
     @Test
     public void cannotUseNegativeNumberInRaiseSalaryMethod() {
         director.raiseSalary(-50);
-        assertEquals(50000, director.getSalary(), 0.01);
+        assertEquals(50000, director.getSalary(), 0.1);
     }
 
     @Test
     public void canGetPayBonus() {
-        assertEquals(1000, director.payBonus(), 0.01);
+        assertEquals(1000, director.payBonus(), 0.1);
     }
 
 }
